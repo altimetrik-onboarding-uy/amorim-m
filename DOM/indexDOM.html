@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title> JavaScript DOM </title>
+	</head>
+	<body>
+	<div id=”Exercise”>
+		<div id=”header”><h1 id=”title”> This is the title </h1> </div>
+		<div id=”content”>
+		   <h2> This is your code </h2>
+		   <p> Text </p>
+		   <p> More text </p>
+		</div>
+	</div>
+</body>
+</html>
+
+1)
+const childNodes = document.querySelector("body").childNodes
+const lastChild = document.querySelector("body").lastChild
+const firstChild = document.querySelector("body").firstChild
+divs = document.querySelectorAll("div")
+divs[2].nextSibling
+divs[2].previousElementSibling
+document.querySelector("body").parentNode
+document.querySelector("body").childNodes
+
+2)
+document.querySelector("body").childNodes[0].nodeValue 
+document.querySelector("body").childNodes[0].nodeValue = "new item"
+h1 = document.querySelector("h1")
+h1.getAttribute("id")
+<h1 id=​"”title”">​ This is the title ​</h1>​
+h1.setAttribute("id","newTitle")
+
+3)
+li = document.createElement("li").text = "hola"
+p = document.querySelector("p")
+textNode = document.createTextNode("Hola")
+p.appendChild(li)
+div = document.querySelector("div")
+listItem = document.createElement("li")
+div.insertBefore(listItem, div.childNodes[1])
+
+div = document.querySelectorAll("div")
+elementToRemove = div[2].lastElementChild
+elementToRemove.removeChild(elementToRemove.childNodes[0])
+
+var el = document.querySelectorAll('div')[1];
+var newEl = document.createElement('p');
+newEl.innerHTML = '<b>Hello World!</b>';
+el.parentNode.replaceChild(newEl, el);
