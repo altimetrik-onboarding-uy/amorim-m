@@ -33,7 +33,8 @@ h1.getAttribute("id")
 h1.setAttribute("id","newTitle")
 
 3)
-li = document.createElement("li").text = "hola"
+li = document.createElement("li")
+li.innerHtml = "holamundo"
 p = document.querySelector("p")
 textNode = document.createTextNode("Hola")
 p.appendChild(li)
